@@ -11,7 +11,15 @@
       #{{i+1}}
     </ion-card-header>
     <ion-card-content>
-      {{value.text}}
+      <p>{{value.text}}</p>
+      <p class="author">{{value.person}}</p>
     </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-right>
+          <button ion-button clear small (click)="onAddToFavorite(value)">Favorite</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 </ion-content>
