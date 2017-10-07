@@ -1,6 +1,6 @@
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let favorited of quotes">
+    <ion-item *ngFor="let favorited of quotes" (click)="onViewQuote(favorited)">
       <h2>{{favorited.person}}</h2>
       <p>{{favorited.text}}</p>
     </ion-item>
