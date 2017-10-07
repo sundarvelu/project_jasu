@@ -28,7 +28,6 @@ export class FavoritesPage {
         this.quotesService.removeQuoteFormFavorites(favorited);
         this.quotes = this.quotesService.getFavoriteQuotes();
       }
-
     });
 
   }
