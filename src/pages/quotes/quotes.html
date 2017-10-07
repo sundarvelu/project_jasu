@@ -6,5 +6,12 @@
 
 
 <ion-content padding>
-
+  <ion-card *ngFor="let value of quote.quotes; let i = index">
+    <ion-card-header>
+      #{{i+1}}
+    </ion-card-header>
+    <ion-card-content>
+      {{value.text}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
