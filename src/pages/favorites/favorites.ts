@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {Quote} from "../../data/quoute.interface";
+import {QuotesService} from "../../services/quotes";
 
 @Component({
   selector: 'page-favorites',
@@ -6,5 +8,13 @@ import {Component} from '@angular/core';
 })
 export class FavoritesPage {
 
+  quotes: Quote[];
+
+  constructor(private quotesService: QuotesService) {
+  }
+
+  ionViewWillEnter() {
+    this.quotes = this.quotesService.getFavoriteQuotes();
+  }
 }
 
