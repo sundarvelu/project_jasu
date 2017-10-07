@@ -7,11 +7,10 @@ import quotes from '../../data/quotes';
   templateUrl: 'library.html',
 })
 export class LibraryPage implements OnInit {
-  queryCollection: { category: string, quoutes: Quote[], icon: string }[];
+  queryCollection: { category: string, quotes: Quote[], icon: string }[];
 
   ngOnInit() {
     this.queryCollection = quotes;
   }
-
 
 }

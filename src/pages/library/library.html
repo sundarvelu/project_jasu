@@ -1,3 +1,8 @@
 <ion-content padding>
-
+  <h3 text-center>Select your favorite Qoute</h3>
+  <ion-list>
+    <button ion-item *ngFor="let quote of queryCollection">
+      {{quote.category}}
+    </button>
+  </ion-list>
 </ion-content>
