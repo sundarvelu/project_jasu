@@ -1,8 +1,17 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Quote} from "../../data/quoute.interface";
+import quotes from '../../data/quotes';
 
 @Component({
   selector: 'page-library',
   templateUrl: 'library.html',
 })
-export class LibraryPage {
+export class LibraryPage implements OnInit {
+  queryCollection: { category: string, quoutes: Quote[], icon: string }[];
+
+  ngOnInit() {
+    this.queryCollection = quotes;
+  }
+
+
 }
