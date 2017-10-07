@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AlertController, NavController, NavParams} from "ionic-angular";
 import {Quote} from "../../data/quoute.interface";
+import {QuotesService} from "../../services/quotes";
 
 @Component({
   selector: 'page-quotes',
@@ -12,7 +13,8 @@ export class QuotesPage implements OnInit {
 
   constructor(private navCtrl: NavController,
               private navParams: NavParams,
-              private alertCtrl: AlertController) {
+              private alertCtrl: AlertController,
+              private quoteService: QuotesService) {
   }
 
   ngOnInit(): void {
@@ -28,7 +30,7 @@ export class QuotesPage implements OnInit {
         {
           text: 'Yes, go ahead',
           handler: () => {
-            console.log('OK');
+            this.quoteService.addQuoteToFavorites(value);
           }
         }, {
           text: 'No, I changed my mind!',
