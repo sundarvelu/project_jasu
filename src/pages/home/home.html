@@ -1,11 +1,4 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Home application
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  Ionic Application
-</ion-content>
+<ion-tabs>
+  <ion-tab [root]="favoritePage" tabTitle="Favorites"></ion-tab>
+  <ion-tab [root]="libraryPage" tabTitle="Library"></ion-tab>
+</ion-tabs>
