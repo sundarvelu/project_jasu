@@ -7,12 +7,20 @@ import {NavParams, ViewController} from "ionic-angular";
 })
 export class QuotePage implements OnInit {
 
+  person: string;
+  text: string;
+
   constructor(private navParams: NavParams,
               private viewCtrl: ViewController) {
   }
 
   ngOnInit() {
 
+  }
+
+  ionViewDidLoad() {
+    this.person = this.navParams.get('person');
+    this.text = this.navParams.get('text');
   }
 
   onClose() {

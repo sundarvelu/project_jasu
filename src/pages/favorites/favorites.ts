@@ -21,7 +21,7 @@ export class FavoritesPage {
   }
 
   onViewQuote(favorited: Quote) {
-    const modal = this.modalCtrl.create(QuotePage);
+    const modal = this.modalCtrl.create(QuotePage, favorited);
     modal.present();
   }
 }
